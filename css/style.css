@@ -255,3 +255,31 @@ body::after {
   height: 65px;   /* ajuste la taille selon ton besoin */
   margin-right: 10px;
 }
+
+/* Sélecteur de langue */
+.lang-switcher {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.lang-switcher button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.2 s ease;
+}
+.lang-switcher button:hover {
+  transform: scale( 1.2 );
+}
+/* Cacher l'élément Google Translate */
+.google-translate-hidden {
+  display: none;
+}
+/* Supprimer le logo Google */
+.goog-logo-link,
+.goog-te-gadget span {
+  display: none !important;
+}
+.goog-te-gadget {
+  font-size: 0; }
