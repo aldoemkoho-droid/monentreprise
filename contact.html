@@ -8,6 +8,15 @@
 </head>
 <body>
 <header>
+    <!-- Sélecteur de langue -->
+<div class="lang-switcher">
+  <button onclick="setLanguage('fr')" title="Français">🇫🇷</button> <button onclick="
+  setLanguage('en')" title="English">🇬🇧</button>
+  <button onclick="setLanguage('es')" title="Español">🇪🇸</button>
+  <button onclick="setLanguage('pt')" title="Português">🇵🇹</button>
+  <button onclick="setLanguage('ar')" title="العربية">🇸🇦</button>
+</div>
+<!-- Google Translate (caché) --> <div id="google_translate_element" class="google-translate-hidden"></div>
     <nav>
         <h1>MonEntreprise</h1>
         <div class="menu-toggle" id="menu-toggle">
@@ -41,4 +50,5 @@
 </footer>
 <script src="js/script.js"></script>
 </body>
+
 </html>
