@@ -289,6 +289,12 @@ button:active {
     height: 40px; /* réduit la hauteur du logo */
   }
 
+
+    body {
+  transform: scale(1.25);
+  transform-origin: top center;
+}
+
   nav h1 {
     font-size: 1.2rem; /* réduit la taille du texte MonEntreprise */
   }
