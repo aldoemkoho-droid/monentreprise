@@ -5,10 +5,10 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     this.reset();
 });
 
-const menuToggle = document.getElementById("menu-toggle");
-const navMenu = document.getElementById("nav-menu");
-menuToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
+document.getElementById("menu-toggle").addEventListener("click", function() {
+    document.getElementById("nav-menu").classList.toggle("active");
+    this.classList.toggle("open"); // ajoute la classe open au hamburger
+
 
 });
 
@@ -32,3 +32,4 @@ function setLanguage(lang) {
 }
 </script>
 <script src=" https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit "></script>
+
