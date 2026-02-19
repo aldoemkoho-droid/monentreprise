@@ -43,11 +43,6 @@
 
         <button type="submit">Envoyer</button>
     </form>
-
-    <!-- Message de confirmation -->
-    <p id="formResponse" style="display:none; color:green;">
-        ✅ Merci, votre message a été envoyé avec succès !
-    </p>
 </section>
 
 <footer>
@@ -72,18 +67,8 @@
       emailjs.sendForm('service_3o5egad', 'template_93a4nvo', this)
         .then(() => {
           console.log("Succès : Email envoyé !");
-          const responseMsg = document.getElementById("formResponse");
-          responseMsg.style.display = "block";
-
-          // Vide les champs après 3 secondes
-          setTimeout(() => {
-            this.reset(); // utilise directement le formulaire soumis
-          }, 3000);
-
-          // Cache le message de confirmation après 5 secondes
-          setTimeout(() => {
-            responseMsg.style.display = "none";
-          }, 5000);
+          // Redirection vers une page de confirmation
+          window.location.href = "confirmation.html";
         }, (error) => {
           console.error("Erreur EmailJS :", error);
           alert('Erreur lors de l\'envoi : ' + JSON.stringify(error));
