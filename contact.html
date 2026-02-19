@@ -67,10 +67,14 @@
     document.getElementById('contact-form').addEventListener('submit', function(event) {
       event.preventDefault();
 
+      console.log("Tentative d'envoi via EmailJS...");
+
       emailjs.sendForm('service_3o5egad', 'template_93a4nvo', this)
         .then(() => {
+          console.log("Succès : Email envoyé !");
           document.getElementById("formResponse").style.display = "block";
         }, (error) => {
+          console.error("Erreur EmailJS :", error);
           alert('Erreur lors de l\'envoi : ' + JSON.stringify(error));
         });
     });
