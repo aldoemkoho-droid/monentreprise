@@ -61,7 +61,7 @@ section {
 #accueil {
     display: flex;
     align-items: center;
-    min-height: 100vh;
+    min-height: 70vh;
 }
 .hero {
     max-width: 600px;
