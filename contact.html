@@ -72,7 +72,18 @@
       emailjs.sendForm('service_3o5egad', 'template_93a4nvo', this)
         .then(() => {
           console.log("Succès : Email envoyé !");
-          document.getElementById("formResponse").style.display = "block";
+          const responseMsg = document.getElementById("formResponse");
+          responseMsg.style.display = "block";
+
+          // Vide les champs après 3 secondes
+          setTimeout(() => {
+            document.getElementById("contact-form").reset();
+          }, 3000);
+
+          // Cache le message de confirmation après 5 secondes
+          setTimeout(() => {
+            responseMsg.style.display = "none";
+          }, 5000);
         }, (error) => {
           console.error("Erreur EmailJS :", error);
           alert('Erreur lors de l\'envoi : ' + JSON.stringify(error));
