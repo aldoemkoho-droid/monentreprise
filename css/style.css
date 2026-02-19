@@ -277,20 +277,23 @@ button:hover {
   box-shadow: 0 6px 14px rgba(0,0,0,0.3);
 }
 
-@media (max-width: 768px) {
-  .logo {
-    height: 40px; /* réduit la taille du logo */
-  }
-  nav h1 {
-    font-size: 1.2rem; /* réduit la taille du texte */
-  }
-  .logo-container {
-    flex-shrink: 1; /* permet au bloc logo de ne pas prendre toute la largeur */
-  }
-}
-
 
 button:active {
   transform: scale(0.95);
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+  /* Réduire la taille du logo et du texte */
+  .logo {
+    height: 40px; /* réduit la hauteur du logo */
+  }
+
+  nav h1 {
+    font-size: 1.2rem; /* réduit la taille du texte MonEntreprise */
+  }
+
+  .logo-container {
+    flex-shrink: 1; /* évite que le bloc logo occupe toute la largeur */
+  }
 }
