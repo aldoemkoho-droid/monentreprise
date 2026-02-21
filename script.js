@@ -50,3 +50,4 @@ function setLanguage(lang) {
     select.dispatchEvent(new Event("change"));
   }
 }
+
